@@ -1,0 +1,32 @@
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor directories
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
+error_log
+access_log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Uploads (optional - remove if you want to track uploads)
+uploads/*
+!uploads/.gitkeep
+
+# Configuration (optional - be careful with credentials)
+# includes/config.php
+
+# Database dumps
+*.sql.gz
+backup/
