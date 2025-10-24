@@ -63,6 +63,10 @@ HIFIS (Homeless Individuals and Families Information System) is designed to supp
      ```bash
      mysql -u root -p hifis_db < database/schema.sql
      ```
+   - (Optional) Load sample data for testing:
+     ```bash
+     mysql -u root -p hifis_db < database/sample_data.sql
+     ```
 
 3. **Configure Database Connection**
    - Copy the database configuration template:
@@ -90,7 +94,8 @@ HIFIS (Homeless Individuals and Families Information System) is designed to supp
 
 6. **Access the Application**
    - Open your web browser
-   - Navigate to: `http://localhost/HIFIS-Oct23/` (or your configured URL)
+   - Navigate to: `http://localhost/HIFIS-Oct23/install.php` first to verify setup
+   - Or go directly to: `http://localhost/HIFIS-Oct23/` (or your configured URL)
 
 ## Project Structure
 
@@ -107,9 +112,12 @@ HIFIS-Oct23/
 │   └── js/
 │       └── main.js          # JavaScript and Ajax functions
 ├── database/
-│   └── schema.sql           # Database schema
+│   ├── schema.sql           # Database schema
+│   ├── install.sql          # Quick installation script
+│   └── sample_data.sql      # Sample data for testing
 ├── includes/
-│   ├── db_config.php        # Database configuration
+│   ├── db_config.php        # Database configuration (gitignored)
+│   ├── db_config.php.example # Configuration template
 │   ├── header.php           # Common header
 │   └── footer.php           # Common footer
 ├── index.php                # Dashboard/home page
@@ -119,6 +127,7 @@ HIFIS-Oct23/
 ├── client_details.php       # Client details view
 ├── services.php             # Services management
 ├── reports.php              # Reports and analytics
+├── install.php              # Installation checker page
 ├── .gitignore               # Git ignore file
 └── README.md                # This file
 ```
